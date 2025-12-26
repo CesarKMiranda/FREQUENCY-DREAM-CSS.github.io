@@ -1,90 +1,98 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+    <!--Datos importantes para renderizar nuestra pagina-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FREQUENCY DREAM</title>
-    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header class="main-header">
-        <nav class="navbar">
-            <ul class="nav-list">
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#promociones">Promociones</a></li>
-                <li><a href="#productos">Menu</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+    <!-- CABECERA -->    
+    <header> <!--Esta es una etiqueta semantica de cabecera-->
+        <nav> <!--Barra de navegación-->
+            <ul> <!--Lista desordenada-->
+                <li>Nosotros</li>
+                <li>Promociones</li>
+                <li>Menu</li>
+                <li>Contacto</li>
             </ul>
         </nav> 
     </header>
 
+    <!--Informacion principal de mi pagina-->
     <main>
-        
-        <article id="nosotros" class="about-section">
-            <h1 class="main-title">FREQUENCY DREAM</h1>
-            <div class="about-content">
-                <p>Somos una escuela dedicada a despertar y perfeccionar la imaginación auditiva.</p>
-                <p>En FREQUENCY DREAM no solo enseñamos a operar software, formamos arquitectos del paisaje sonoro capaces de esculpir emociones y narrativas a través del diseño de sonido.</p>
-            </div>
+        <!--Seccion sobre nosotros-->
+        <article>
+            <h2> FREQUENCY DREAM</h2>
+
+            <p>
+                Somos una escuela dedicada a despertar y perfeccionar la imaginación auditiva
+            </p>
+
+            <p>
+                En FREQUENCY DREAM no solo enseñamos a operar software, formamos arquitectos del paisaje sonoro capaces de esculpir emociones y narrativas a través del diseño de sonido
+            </p>
         </article>
 
-        <hr class="separator">
-
-        <section id="promociones" class="promo-section">
-            <h2>Promociones</h2>
-            <ul class="promo-list">
-                <li><strong>Combo super brain:</strong> 3x1 en diseño de sonido + mezcla + masterización</li>
-                <li><strong>Combo master of masters:</strong> Diseño de sonido + Mezcla + Masterización + 5 VST + 10 plugins</li>
-                <li><strong>15% de descuento</strong> todo diciembre para nuevos estudiantes</li>
+        <!--Seccion de cursos-->
+        <section>
+            <section>
+            <h2> Promociones</h2>
+            <ul>
+                <li>Combo super brain: 3x1 en diseño de sonido + mezcla + masterización</li>
+                <li>Combo master of masters: Diseño de sonido + Mezcla + Masterización + 5 VST + 10 plugins</li>
+                <li>25% de descuento todo el mes de Enero para nuevos estudiantes</li>
             </ul>
         </section>
 
-        <hr class="separator">
-
-        <section id="productos" class="products-section">
+        <!--Seccion de Productos-->
+        <section>
             <h2>ALV (A La Venta!)</h2>
 
-            <div class="products-container">
-                <article class="product-card">
-                    <button class="btn-add">Agregar</button>
-                    <img src="https://www.productionmusiclive.com/cdn/shop/products/MixingandMasteringBundlenew_1200x1200.png?v=1652189958" alt="Combo Super Brain">
-                    <h3>Combo super brain</h3>
-                    <p>3x1 (diseño de sonido, mezcla y masterización)</p>
-                    <span class="price">$2500 MXN</span>
-                </article>
+            <!-- Division 1 -->
 
-                <article class="product-card">
-                    <button class="btn-add">Agregar</button>
-                    <img src="https://seedtostage.com/wp-content/uploads/2024/07/all-course-bundle-cropped-281x300.webp" alt="Combo Master of Masters">
-                    <h3>Combo master of masters</h3>
-                    <p>Todos los cursos + VST + Plugins + Soporte por parte de un mentor</p>
-                    <span class="price">$3999 MXN</span>
-                </article>
+                        <button>Agregar</button><br><br>
+                        <img src="https://www.productionmusiclive.com/cdn/shop/products/MixingandMasteringBundlenew_1200x1200.png?v=1652189958" width="400px">
+                        <h3>Combo super brain</h3>
+                        <p>3x1 (diseño de sonido, mezcla y masterización)</p>
+                        <p>$2500 MXN</p>
 
-                <article class="product-card">
-                    <button class="btn-add">Agregar</button>
-                    <img src="https://png.pngtree.com/element_our/png/20181022/15-png_165275.jpg" alt="Descuento">
-                    <h3>15% de descuento</h3>
-                    <p>Nuevos estudiantes solo en diciembre</p>
-                </article>
-            </div>
+
+            <!-- Division 2 -->
+            
+                        <button>Agregar</button><br><br>
+                        <img src="https://seedtostage.com/wp-content/uploads/2024/07/all-course-bundle-cropped-281x300.webp" width="400px">
+                        <h3>Combo master of masters</h3>
+                        <p>Todos los cursos + VST + Plugins + Soporte por parte de un mentor</p>
+                        <p>$3999 MXN</p>
+
+
+            <!-- Division 3 -->
+
+                        <button>Agregar</button><br><br>
+                        <img src="https://png.pngtree.com/element_our/png/20181022/15-png_165275.jpg" width="300px">
+                        <h3>15% de descuento</h3>
+                        <p>Nuevos estudiantes solo en diciembre</p>
         </section>
+
 
     </main>
 
-    <footer id="contacto" class="main-footer">
+<!--Pie de pagina-->
+    <footer align="center">
         <h2>Contacto</h2>
         <p>Visítanos en nuestras redes sociales</p>
 
-        <ul class="social-links">
-            <li><a href="https://www.facebook.com/OlbaidOfficial/photos_of/">Facebook</a></li>
-            <li><a href="https://www.instagram.com/olbaid_music/">Instagram</a></li>
-            <li><a href="https://www.tiktok.com/@olbaid_music">TikTok</a></li>
-            <li><a href="https://www.youtube.com/watch?v=fm7nfT1LlDM">YouTube</a></li>
+        <ul style="list-style:none;">
+            <li><a href="https://www.facebook.com/OlbaidOfficial/photos_of/" style="color:white;">Facebook</a></li>
+            <li><a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Folbaid_music%2F&is_from_rle" style="color:white;">Instagram</a></li>
+            <li><a href="https://www.tiktok.com/@olbaid_music" style="color:white;">TikTok</a></li>
+            <li><a href="https://www.youtube.com/watch?v=fm7nfT1LlDM" style="color:white;">YouTube</a></li>
         </ul>
 
-        <p class="copyright">&copy; 2025 FREQUENCY DREAM - Todos los derechos reservados</p>
+        <p>2025 FREQUENCY DREAM - Todos los derechos reservados</p>
     </footer>
 
 </body>

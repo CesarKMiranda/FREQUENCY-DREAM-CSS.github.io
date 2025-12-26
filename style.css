@@ -1,0 +1,136 @@
+/* --- 1. SELECTORES UNIVERSALES Y RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Box Model de calidad */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0f0f0f;
+    color: #eeeeee;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- 2. SELECTORES DE CLASE Y DISPLAYS (FLEX) --- */
+.main-header {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Usamos display: flex para alinear el logo y el menú */
+.main-header .container {
+    display: flex; 
+    justify-content: space-between; /* Separa los elementos a los extremos */
+    align-items: center; /* Centra verticalmente */
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.logo span { color: #00eaff; } /* Selector descendente */
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+/* --- 3. SELECTORES DE ATRIBUTO Y PSEUDO-CLASES (HOVER) --- */
+.nav-link {
+    text-decoration: none;
+    color: #aaa;
+    transition: all 0.3s ease; /* Transición suave para el hover */
+}
+
+/* Efecto Hover: cambia el color al pasar el mouse */
+.nav-link:hover {
+    color: #00eaff;
+}
+
+.btn-contact {
+    border: 1px solid #00eaff;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+.btn-contact:hover {
+    background-color: #00eaff;
+    color: #000;
+}
+
+/* --- 4. GRID DE PRODUCTOS --- */
+.products-grid {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las cajas bajen si no caben */
+    gap: 25px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.product-card {
+    background: #1a1a1a;
+    width: 350px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid #333;
+}
+
+/* Hover en la tarjeta completa */
+.product-card:hover {
+    transform: scale(1.03); /* Crece ligeramente */
+    border-color: #00eaff;
+    box-shadow: 0 10px 30px rgba(0, 234, 255, 0.1);
+}
+
+.image-container {
+    height: 200px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+}
+
+.card-body {
+    padding: 25px;
+}
+
+.price {
+    display: block; /* Ocupa toda la línea */
+    font-size: 1.5rem;
+    color: #00eaff;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid #00eaff;
+    color: #00eaff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Efecto hover en botón */
+.btn-primary:hover {
+    background: #00eaff;
+    color: #000;
+}
