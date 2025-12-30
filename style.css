@@ -70,14 +70,14 @@ footer a {
 h3 {
     font-size: 1.4rem;
     margin-top: 10px;
-    letter-spacing: 1px; /* Espaciado entre letras para un look moderno */
+    letter-spacing: 1px; /* Espaciado entre letras */
 }
 
-/* Uso de Flexbox para que los elementos de la lista se pongan uno al lado del otro */
+/* Usando Flexbox para que los elementos de la lista se pongan uno al lado del otro */
 nav ul {
-    display: flex; /* Activa el modo flexible */
-    list-style: none; /* Quita los puntos de la lista */
-    gap: 20px; /* Crea un espacio de 20px entre cada li sin usar márgenes manuales */
+    display: flex; /* Modo flexible */
+    list-style: none; /* Quité los puntos de la lista */
+    gap: 20px; /* Espacio de 20px entre cada li sin usar márgenes manuales */
 }
 section section {
     position: relative; /* Lo preparamos para ser un contenedor de elementos absolutos */
@@ -87,8 +87,37 @@ section section {
 }
 
 header {
-    position: sticky; /* El menú te seguirá mientras bajas por la página */
+    position: sticky; /* Intento de seguimiento de menú mientras bajo por la página */
     top: 0;           /* Se queda pegado justo al inicio superior */
     background-color: #1a1a1a;
     width: 100%;
 }
+
+/* Centrado del menú en el Navbar */
+nav ul {
+    display: flex;
+    justify-content: center; /* Centré los items horizontalmente */
+    align-items: center;     /* Los alinee al centro vertical */
+    height: 60px;            /* Altura definida para notar el centrado vertical */
+}
+
+/* Apliqué esto a un contenedor que envuelve los productos */
+.products-container {
+    display: flex;
+    flex-wrap: wrap;         /* Si no caben, bajan a la siguiente fila */
+    justify-content: space-around; /* Deja espacio equitativo entre las tarjetas */
+    gap: 30px;               /* Espacio constante entre filas y columnas */
+}
+
+/* Estilo para cada bloque de producto en tu HTML */
+section section {
+    /* flex: grow | shrink | basis */
+    flex: 1 1 300px; /* Crece si hay espacio, se encoge si no, y mide mínimo 300px */
+    
+    display: flex;
+    flex-direction: column; /* Alinea el botón, la imagen y el texto en columna */
+    align-items: center;    /* Centra todo el contenido de la tarjeta */
+    text-align: center;
+}
+
+
