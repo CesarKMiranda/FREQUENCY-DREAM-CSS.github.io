@@ -34,3 +34,61 @@ button:hover {
     transform: scale(1.05); /* Efecto visual de agrandado */
     transition: all 0.3s ease; /* Suaviza el cambio de color y tamaño */
 }
+/* Aplicamos la fuente al body (el padre de todos) */
+body {
+    /* La fuente se heredará a los párrafos, listas y títulos automáticamente */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333333; 
+    line-height: 1.6; /* Mejora la lectura heredando el espaciado entre líneas */
+}
+/* Selector de etiqueta (Baja especificidad) */
+h2 {
+    color: #1a1a1a;
+}
+
+/* Selector combinado (Mayor especificidad): 
+   "Afecta solo al h2 que esté dentro de un article" */
+article h2 {
+    color: #00d4ff; 
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+/* Estilizando las listas (Promociones y Footer) */
+ul {
+    font-size: 1.1rem; /* 1.1 veces el tamaño base */
+}
+
+/* Estilizando los enlaces dentro del footer */
+footer a {
+    text-decoration: none; /* Quitamos el subrayado por defecto */
+    font-weight: 500;
+    /* Usamos herencia forzada si es necesario */
+    color: inherit; 
+}
+
+/* Aplicando un estilo específico para el título de productos */
+h3 {
+    font-size: 1.4rem;
+    margin-top: 10px;
+    letter-spacing: 1px; /* Espaciado entre letras para un look moderno */
+}
+
+/* Uso de Flexbox para que los elementos de la lista se pongan uno al lado del otro */
+nav ul {
+    display: flex; /* Activa el modo flexible */
+    list-style: none; /* Quita los puntos de la lista */
+    gap: 20px; /* Crea un espacio de 20px entre cada li sin usar márgenes manuales */
+}
+section section {
+    position: relative; /* Lo preparamos para ser un contenedor de elementos absolutos */
+    background: white;
+    padding: 20px;
+    margin: 10px;
+}
+
+header {
+    position: sticky; /* El menú te seguirá mientras bajas por la página */
+    top: 0;           /* Se queda pegado justo al inicio superior */
+    background-color: #1a1a1a;
+    width: 100%;
+}
