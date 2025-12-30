@@ -109,15 +109,67 @@ nav ul {
     gap: 30px;               /* Espacio constante entre filas y columnas */
 }
 
-/* Estilo para cada bloque de producto en tu HTML */
+/* Estilo para cada bloque de producto en mi html */
 section section {
-    /* flex: grow | shrink | basis */
-    flex: 1 1 300px; /* Crece si hay espacio, se encoge si no, y mide mínimo 300px */
+    /* flex */
+    flex: 1 1 300px; /* Crece si hay espacio, se encoge si no, y mide como mínimo 300px */
     
     display: flex;
-    flex-direction: column; /* Alinea el botón, la imagen y el texto en columna */
-    align-items: center;    /* Centra todo el contenido de la tarjeta */
+    flex-direction: column; /* Alinee el botón, la imagen y el texto en columna */
+    align-items: center;    /* Centré todo el contenido de la tarjeta */
     text-align: center;
 }
 
+header {
+    background-color: #1a1a1a;
+    position: sticky; 
+    top: 0;
+    
+    /* Z-index: Definí la profundidad en el eje Z (hacia adelante/atrás). 
+       Un valor alto asegura que el menú siempre pase "por encima" de las fotos. */
+    z-index: 1000; 
+    
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between; /* Separé el logo de los links */
+    align-items: center;
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 40px 20px;
+    
+    /* Usé Flexbox vertical para apilar el título, las redes y el copyright */
+    display: flex;
+    flex-direction: column; 
+    align-items: center; /* Centrado horizontal de todos los hijos */
+    gap: 20px;
+}
+
+footer ul {
+    display: flex; /* Las redes sociales se ponen en línea horizontal */
+    list-style: none;
+    gap: 25px;
+    padding: 0;
+}
+
+footer a {
+    color: #00d4ff;
+    text-decoration: none;
+    transition: transform 0.3s;
+    display: inline-block;
+}
+
+footer a:hover {
+    transform: translateY(-5px); /* Pequeño salto al pasar el mouse */
+    color: #ffffff;
+}
+
+/* Un toque final para el copyright */
+footer p:last-child {
+    font-size: 0.8rem;
+    opacity: 0.7; /* Más discreto y pro */
+    margin-top: 10px;
+}
 
