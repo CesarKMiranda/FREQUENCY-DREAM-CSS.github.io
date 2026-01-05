@@ -1,99 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
-    <!--Datos importantes para renderizar nuestra pagina-->
-<head><link rel="stylesheet" href="style.css">
+<html lang="es">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FREQUENCY DREAM</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- CABECERA -->    
-    <header> <!--Esta es una etiqueta semantica de cabecera-->
-        <nav> <!--Barra de navegación-->
-            <ul> <!--Lista desordenada-->
-                <li>Nosotros</li>
-                <li>Promociones</li>
-                <li>Menu</li>
-                <li>Contacto</li>
-            </ul>
-        </nav> 
-    </header>
-
-    <!--Informacion principal de mi pagina-->
-    <main>
-        <!--Seccion sobre nosotros-->
-        <article>
-            <img src="images/FREQUENCY DREAM LOGO.png" width="600px">
-
-            <p>
-                Somos una escuela dedicada a despertar y perfeccionar la imaginación auditiva
-            </p>
-
-            <p>
-                En FREQUENCY DREAM no solo enseñamos a operar software, formamos arquitectos del paisaje sonoro capaces de esculpir emociones y narrativas a través del diseño de sonido
-            </p>
-        </article>
-
-        <!--Seccion de cursos-->
-        <section>
-            <section>
-            <h2> Promociones</h2>
-            <ul>
-                <li>Combo super brain: 3x1 en diseño de sonido + mezcla + masterización</li>
-                <li>Combo master of masters: Diseño de sonido + Mezcla + Masterización + 5 VST + 10 plugins</li>
-                <li>25% de descuento todo el mes de Enero para nuevos estudiantes</li>
-            </ul>
-        </section>
-
-        <!--Seccion de Productos-->
-        <section>
-            <h2>ALV (A La Venta!)</h2>
-
-            <!-- Division 1 -->
-
-                        <button>Agregar</button><br><br>
-                        <img src="https://www.productionmusiclive.com/cdn/shop/products/MixingandMasteringBundlenew_1200x1200.png?v=1652189958" width="400px">
-                        <h3>Combo super brain</h3>
-                        <p>3x1 (diseño de sonido, mezcla y masterización)</p>
-                        <p>$2500 MXN</p>
-
-
-            <!-- Division 2 -->
-            
-                        <button>Agregar</button><br><br>
-                        <img src="https://seedtostage.com/wp-content/uploads/2024/07/all-course-bundle-cropped-281x300.webp" width="400px">
-                        <h3>Combo master of masters</h3>
-                        <p>Todos los cursos + VST + Plugins + Soporte por parte de un mentor</p>
-                        <p>$3999 MXN</p>
-
-
-            <!-- Division 3 -->
-
-                        <button>Agregar</button><br><br>
-                        <img src="https://png.pngtree.com/element_our/png/20181022/15-png_165275.jpg" width="300px">
-                        <h3>15% de descuento</h3>
-                        <p>Nuevos estudiantes solo en diciembre</p>
-        </section>
-
-
-    </main>
-
-<!--Pie de pagina-->
-    <footer align="center">
-        <h2>Contacto</h2>
-        <p>Visítanos en nuestras redes sociales</p>
-
-        <ul style="list-style:none;">
-            <li><a href="https://www.facebook.com/OlbaidOfficial/photos_of/" style="color:white;">Facebook</a></li>
-            <li><a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Folbaid_music%2F&is_from_rle" style="color:white;">Instagram</a></li>
-            <li><a href="https://www.tiktok.com/@olbaid_music" style="color:white;">TikTok</a></li>
-            <li><a href="https://www.youtube.com/watch?v=fm7nfT1LlDM" style="color:white;">YouTube</a></li>
+<header>
+    <nav>
+        <ul class="nav-menu">
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#promos">Promociones</a></li>
+            <li><a href="#productos">Cursos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
         </ul>
+    </nav>
+</header>
 
-        <p>2025 FREQUENCY DREAM - Todos los derechos reservados</p>
-    </footer>
+<main>
+
+    <!-- Nosotros -->
+    <article id="nosotros" class="hero">
+        <img src="images/FREQUENCY DREAM LOGO.png" alt="Frequency Dream Logo">
+
+        <p>
+            Somos una escuela dedicada a despertar y perfeccionar la imaginación auditiva.
+        </p>
+
+        <p>
+            En FREQUENCY DREAM no solo enseñamosa usar software de produccion musical, formamos arquitectos del paisaje sonoro capaces de esculpir emociones y narrativas.
+        </p>
+
+        <p>
+            Recibe clases personalizadas con los mejores productores del género musical que necesites aprender.
+        </p>
+
+        <p>
+            Convierte tus sueños en realidad y vive de lo que te gusta, es ahora o nunca.
+        </p>
+    </article>
+
+    <!-- Promociones -->
+    <section id="promos" class="promos">
+        <h2>Promociones</h2>
+        <ul>
+            <li>Combo Super Brain: 3x1 en diseño de sonido + mezcla + masterización</li>
+            <li>Combo Master of Masters: Cursos + VST + Plugins</li>
+            <li>Clase muestra presencial en nuestros estudios</li>
+            <li>25% de descuento todo enero para nuevos estudiantes</li>
+            <li>15% de descuento extra en clases en linea</li>
+        </ul>
+    </section>
+
+    <!-- Productos -->
+    <section id="productos" class="productos">
+        <h2>ALV (A LA VENTA!) PRECIOS QUE NO VOLVERAN</h2>
+
+        <div class="productos-grid">
+
+            <div class="card">
+                <img src="https://www.productionmusiclive.com/cdn/shop/products/MixingandMasteringBundlenew_1200x1200.png?v=1652189958" alt="">
+                <h3>Combo Super Brain</h3>
+                <p>Diseño de sonido, mezcla y masterización</p>
+                <p class="precio">$2500 MXN</p>
+                <button>Agregar</button>
+            </div>
+
+            <div class="card">
+                <img src="https://seedtostage.com/wp-content/uploads/2024/07/all-course-bundle-cropped-281x300.webp" alt="">
+                <h3>Master of Masters</h3>
+                <p>Todos los cursos + plugins + VSTs de regalo + mentorias las 24 horas del dia </p>
+                <p class="precio">$3999 MXN</p>
+                <button>Agregar</button>
+            </div>
+
+            <div class="card">
+                <img src="https://png.pngtree.com/element_our/png/20181022/15-png_165275.jpg" alt="">
+                <h3>15% OFF (clases en linea)</h3>
+                <p>Solo para nuevos estudiantes</p>
+                <button>Aplicar</button>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<footer id="contacto">
+    <h2>Contacto</h2>
+    <p>Visítanos en nuestras redes sociales</p>
+
+    <ul class="footer-links">
+        <li><a href="https://www.facebook.com/OlbaidOfficial/photos_of/">Facebook</a></li>
+        <li><a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Folbaid_music%2F&is_from_rle">Instagram</a></li>
+        <li><a href="https://www.tiktok.com/@olbaid_music">TikTok</a></li>
+        <li><a href="https://www.youtube.com/watch?v=fm7nfT1LlDM">YouTube</a></li>
+    </ul>
+
+    <p class="copy">2025 FREQUENCY DREAM · Todos los derechos reservados</p>
+</footer>
 
 </body>
 </html>

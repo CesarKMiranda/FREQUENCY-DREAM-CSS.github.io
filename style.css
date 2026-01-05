@@ -1,169 +1,298 @@
-/* 
-   1. Uso de box model y herencia
-    */
+/* 1. Fundamentos y reset (Box Model & Herencia)
+*/
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* layout */
+    box-sizing: border-box; 
 }
 
 :root {
-    /* Mi paleta de colores */
-    --negro-pro: #080808;
-    --negro-tarjeta: #121212;
+    --negro-pro: #050505;
+    --negro-tarjeta: #111111;
     --cian-electrico: #00f2ff;
-    --blanco-suave: #e0e0e0;
-    --gris-detalle: #444;
+    --blanco-suave: #f5f5f5;
+    --gris-detalle: #2a2a2a;
+    --texto-muted: #a0a0a0;
 }
 
 body {
     background-color: var(--negro-pro);
     color: var(--blanco-suave);
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.8; /* Aumento de interlineado */
 }
 
-/* 
-   2. Uso del navbar (Position, Z-index y Flexbox)
-    */
+/* 2. Barra de navegación (Position Sticky & Glassmorphism)
+*/
 header {
-    background-color: rgba(8, 8, 8, 0.95); /* Transparencia */
-    position: sticky; /* Para hacer que se quede arriba al hacer scroll */
+    background-color: rgba(5, 5, 5, 0.85); 
+    backdrop-filter: blur(12px); /* Efecto cristal intento*/
+    position: sticky; 
     top: 0;
-    z-index: 100; /* Asegura estar por encima de los productos */
-    padding: 20px 0;
+    z-index: 1000; 
+    padding: 15px 0;
     border-bottom: 1px solid var(--gris-detalle);
 }
 
 nav ul {
-    display: flex; /* Flexbox para alinear */
-    justify-content: center; /* Centrado horizontal */
+    display: flex;
+    justify-content: center;
     list-style: none;
-    gap: 40px; /* Espaciado moderno entre links */
+    gap: 50px; /* Más espacio para que el menú respire */
 }
 
 nav ul li {
-    font-weight: bold;
+    font-weight: 600;
     text-transform: uppercase;
-    font-size: 0.85rem;
-    letter-spacing: 2px;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
     cursor: pointer;
-    transition: 0.3s; /* Para hacer que se vea suave en la interacción */
+    color: var(--texto-muted);
+    transition: all 0.3s ease;
 }
 
 nav ul li:hover {
-    color: var(--cian-electrico); /* Feedback visual con hover */
+    color: var(--cian-electrico);
+    text-shadow: 0 0 8px rgba(0, 242, 255, 0.4);
 }
 
-/* 
-   3. Estructura de flexbox
-    */
+/* 3. Estructura (Box-sizing & Flexbox)
+*/
 main {
-    max-width: 1100px;
-    margin: 0 auto; /* Centrado del contenedor principal */
-    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
 }
 
-/* El bloque "sobre nosotros" */
 article {
     text-align: center;
-    padding: 80px 20px;
-    background: linear-gradient(145deg, #111, #050505); /* Gradiente sutil */
-    border-radius: 12px;
-    margin-bottom: 50px;
-    border: 1px solid #1a1a1a;
+    padding: 100px 40px;
+    background: radial-gradient(circle at center, #151515, var(--negro-pro));
+    border-radius: 20px;
+    margin-bottom: 80px;
+    border: 1px solid var(--gris-detalle);
 }
 
-article h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #fff;
+article img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+    /* Logo resaltADO en el fondo negro */
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.1));
 }
 
-/* 
-   4. PRODUCTOS (Multilínea y Flex-basis)
-    */
-/* Este contenedor que maneja las tarjetas */
-.products-grid {
+article p {
+    font-size: 1.15rem;
+    color: var(--texto-muted);
+    max-width: 750px;
+    margin: 15px auto;
+}
+
+/* 4. Seccion de productos (Alineación Multilínea Flexbox)
+*/
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+/* Selector para el contenedor de productos */
+section:last-of-type {
     display: flex;
-    flex-wrap: wrap; /* Alineación multilínea: esencial para responsivo */
-    justify-content: center;
+    flex-wrap: wrap; /* Prueba salto de línea automático */
+    justify-content: center; /* Centrado de tarjetas */
     gap: 30px;
 }
 
-/* Tarjeta individual (Simulando el section section de tu HTML) */
+/* Tarjeta individual */
 section section {
-    flex: 1 1 300px; /* Flex-grow, shrink y basis */
-    max-width: 340px;
+    flex: 1 1 320px; /* Flexbox inteligente: crecimiento, encogimiento y base de 320px */
+    max-width: 380px;
     background-color: var(--negro-tarjeta);
-    padding: 30px;
-    border-radius: 8px;
-    position: relative; /* Para poder usar position absolute dentro si se requiere */
-    transition: transform 0.3s ease;
-    border: 1px solid #1a1a1a;
+    padding: 40px 30px;
+    border-radius: 15px;
+    border: 1px solid var(--gris-detalle);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Centrado de contenido interno */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 section section:hover {
-    transform: translateY(-10px); /* Efecto de elevación medio pro xd */
+    transform: translateY(-15px); /* Efecto de levitación */
     border-color: var(--cian-electrico);
+    box-shadow: 0 15px 35px rgba(0, 242, 255, 0.1);
 }
 
-/* Manejo de imágenes */
 section img {
     width: 100%;
-    height: 200px;
-    object-fit: contain; /* Tratando de evitar que la imagen se deforme */
+    height: 220px;
+    object-fit: contain;
+    margin-bottom: 25px;
+    border-radius: 8px;
+}
+
+section h3 {
+    margin-bottom: 10px;
+    color: var(--blanco-suave);
+}
+
+section p {
+    color: var(--texto-muted);
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+/* 5. Botones (Hover & Especificidad)
+*/
+button {
+    background-color: var(--cian-electrico);
+    color: var(--negro-pro);
+    border: none;
+    padding: 12px 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+    border-radius: 50px; /* Uso de botón tipo "pill" */
+    cursor: pointer;
+    transition: 0.3s;
     margin-bottom: 20px;
 }
 
-/* 
-   5. Botones y detalles (Especificidad)
-    */
-button {
-    background-color: transparent;
-    color: var(--cian-electrico);
-    border: 2px solid var(--cian-electrico);
-    padding: 10px 25px;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: 0.3s;
-    margin-bottom: 15px;
-}
-
 button:hover {
-    background-color: var(--cian-electrico);
-    color: #000;
+    background-color: var(--blanco-suave);
+    transform: scale(1.05);
 }
 
-/* 
-   6. Footer (Alineación y Centrado)
-    */
+/* 6. Pie de pagina (Alineación & Z-index)
+*/
 footer {
-    padding: 60px 20px;
-    margin-top: 50px;
-    background-color: #050505;
+    padding: 80px 20px;
+    background-color: #030303;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Alineación al centro con Flexbox */
+    align-items: center;
     border-top: 1px solid var(--gris-detalle);
 }
 
+footer h2 { margin-bottom: 10px; }
+
 footer ul {
     display: flex;
-    gap: 20px;
-    margin: 20px 0;
+    gap: 30px;
+    margin: 30px 0;
 }
 
 footer a {
+    color: var(--texto-muted);
     text-decoration: none;
     font-size: 0.9rem;
+    font-weight: 500;
     transition: 0.3s;
 }
 
 footer a:hover {
     color: var(--cian-electrico) !important;
 }
+
+footer p:last-child {
+    font-size: 0.75rem;
+    color: #444;
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+
+/* Links de navegacion */
+.nav-menu a {
+    color: var(--texto-muted);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--cian-electrico);
+}
+
+/* Promociones */
+.promos {
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.promos ul {
+    max-width: 700px;
+    margin: auto;
+}
+
+.promos li {
+    margin-bottom: 15px;
+    color: var(--texto-muted);
+}
+
+/* Muestra de los productos */
+.productos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    flex: 1 1 300px;
+    max-width: 350px;
+    background-color: var(--negro-tarjeta);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid var(--gris-detalle);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--cian-electrico);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.precio {
+    font-weight: bold;
+    color: var(--blanco-suave);
+}
+
+/* Pie de pagina */
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.copy {
+    font-size: 0.75rem;
+    color: #444;
+}
+
+/* Intento responsivo no. 4 y final :D */
+@media (max-width: 768px) {
+    nav ul {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    article {
+        padding: 60px 20px;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+}
+
+/* Si se pudo :) */
